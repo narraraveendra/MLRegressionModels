@@ -138,7 +138,7 @@ class LogisticRegression:
         y_score = model.predict_proba(x_test)[:, 1]
         sortInd = np.argsort(y_score)
         sortLabel = y_test.iloc[sortInd]
-        sortScore = y_test[sortInd]
+        sortScore = y_score[sortInd]
 
         x_values = np.linspace(-10, 10, 100)
         y_sigmoid = logisticRegression.sigmoid(x_values)
